@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="28dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="15dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables"
+        tools:showIn="@layout/f_settings_invoices">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="19dp"
+            android:layout_gravity="top"
+            android:contentDescription="@string/back_button_icon_description"
+            android:duplicateParentState="true"
+            android:paddingTop="2dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@drawable/control_navigation_back_button_colors_selector" />
+
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:duplicateParentState="true"
+            android:gravity="top"
+            android:textColor="@drawable/control_navigation_back_button_colors_selector"
+            android:textSize="@dimen/DefaultTextSize"
+            tools:text="Previous page" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnAdditionalTopRightButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="end"
+        android:text="@string/save"
+        android:textColor="@drawable/control_navigation_back_button_colors_selector"
+        android:textSize="@dimen/DefaultTextSize"
+        android:visibility="invisible" />
+
+</LinearLayout>

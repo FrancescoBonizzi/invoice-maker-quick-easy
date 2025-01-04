@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    tools:context=".pages.settings.InvoicesSettingsFragment">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_invoice_detail_new_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/CategoryBlock"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/FragmentLeftMargin"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:labelFor="@id/txtCreationDate"
+                            android:text="@string/invoice_creation_date" />
+
+                        <TextView
+                            android:id="@+id/txtCreationDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:importantForAutofill="no"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/DefaultTextSize"
+                            tools:text="05/08/1990" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/chkPaid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="22dp"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:text="@string/paid" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CategoryBlock"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/customerChooser"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ItemHeight"
+                    android:layout_marginStart="@dimen/FragmentLeftMargin"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@id/txtCustomerName"
+                        android:text="@string/fragment_invoice_detail_customer" />
+
+                    <TextView
+                        android:id="@+id/txtCustomerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:importantForAutofill="no"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/DefaultTextSize"
+                        tools:text="Francesco Bonizzi" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CategoryBlock"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btnInvoiceHeader"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_invoice_detail_header" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnInvoicePayment"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_invoice_detail_payment" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnInvoiceProducts"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/articles" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnInvoiceFooter"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_invoice_detail_footer" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnInvoiceTemplate"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/template" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/totals" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <TextView
+                    android:id="@+id/txtNoArticlesInTotals"
+                    style="@style/ListLikeInvoiceInformation"
+                    android:text="@string/fragment_invoice_detail_add_some_articles" />
+
+                <LinearLayout
+                    android:id="@+id/panelPartial"
+                    style="@style/ListLikeInvoiceInformation"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/partial" />
+
+                    <TextView
+                        android:id="@+id/txtPartialSum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        tools:text="100€" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panelDiscount"
+                    style="@style/ListLikeInvoiceInformation"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtDiscountPercentageLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="Discount (5%)" />
+
+                    <TextView
+                        android:id="@+id/txtDiscountAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        tools:text="5€" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/panelTaxes"
+                    style="@style/ListLikeInvoiceInformation"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtTaxPercentageLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="Taxes (IVA 22%)" />
+
+                    <TextView
+                        android:id="@+id/txtTaxAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        tools:text="20,9€" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/panelTotal"
+                    style="@style/ListLikeInvoiceInformation"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/total"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        tools:text="115,9€" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CategoryBlock"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/btnPreviewAndShare"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        style="@style/ListLikeButtonLeftIconCanDisable"
+                        android:contentDescription="@string/fragment_settings_invoices_settings_icon_description"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/ic_picture" />
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:duplicateParentState="true"
+                        android:text="@string/preview_and_share" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

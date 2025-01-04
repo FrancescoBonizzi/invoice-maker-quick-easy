@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/spinner_item_currency_txtSymbol"
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textSize="@dimen/DefaultTextSize"
+            android:textStyle="bold"
+            tools:text="EUR" />
+
+        <TextView
+            android:id="@+id/spinner_item_currency_txtNationality"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textSize="12sp"
+            tools:text="Europa" />
+
+    </LinearLayout>
+
+    <View style="@style/CategoryItemSeparatorWithoutMargin" />
+
+</LinearLayout>

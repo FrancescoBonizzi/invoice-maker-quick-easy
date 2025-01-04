@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:label="@string/fragment_articles_title"
+    app:startDestination="@id/invoiceDetailFragment">
+
+    <fragment
+        android:id="@+id/invoiceDetailFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.invoiceDetail.InvoiceDetailFragment"
+        android:label="@string/activity_invoice_detail_edit_title">
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_invoiceDetailHeaderFragment"
+            app:destination="@id/invoiceDetailHeaderFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_invoiceDetailPaymentFragment"
+            app:destination="@id/invoiceDetailPaymentFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_invoiceDetailArticlesSummaryFragment"
+            app:destination="@id/invoiceDetailArticlesSummaryFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_invoiceDetailFooterFragment"
+            app:destination="@id/invoiceDetailFooterFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_customersFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/customersFragment" />
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_invoicePreviewFragment2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/invoicePreviewFragment2" />
+        <action
+            android:id="@+id/action_invoiceDetailFragment_to_templatesFragment2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/templatesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoiceDetailArticlesSummaryFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.invoiceDetail.InvoiceDetailArticlesSummaryFragment"
+        android:label="@string/fragment_invoice_detail_articles">
+        <action
+            android:id="@+id/action_invoiceDetailArticlesSummaryFragment_to_articlesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/articlesFragment" />
+        <action
+            android:id="@+id/action_invoiceDetailArticlesSummaryFragment_to_invoiceDetailArticleDetail"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/invoiceDetailArticleDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoiceDetailFooterFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.invoiceDetail.InvoiceDetailFooterFragment"
+        android:label="@string/fragment_invoice_detail_footer" />
+    <fragment
+        android:id="@+id/invoiceDetailHeaderFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.invoiceDetail.InvoiceDetailHeaderFragment"
+        android:label="@string/fragment_invoice_detail_header" />
+    <fragment
+        android:id="@+id/invoiceDetailPaymentFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.invoiceDetail.InvoiceDetailPaymentFragment"
+        android:label="@string/fragment_invoice_detail_payment" />
+    <fragment
+        android:id="@+id/customersFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.customers.CustomersFragment"
+        android:label="@string/fragment_customers_title">
+        <action
+            android:id="@+id/action_customersFragment_to_customerDetailFragment2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/customerDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerDetailFragment2"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.customers.CustomerDetailFragment"
+        android:label="CustomerDetailFragment" />
+    <fragment
+        android:id="@+id/invoiceDetailArticleDetail"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.invoiceDetail.InvoiceDetailArticleDetailFragment"
+        android:label="@string/invoice_article">
+    </fragment>
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.articles.ArticlesFragment"
+        android:label="@string/fragment_articles_title">
+        <action
+            android:id="@+id/action_articlesFragment_to_invoiceDetailArticleDetail"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/invoiceDetailArticleDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoicePreviewFragment2"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.InvoicePreviewFragment"
+        android:label="@string/invoice_preview" />
+    <fragment
+        android:id="@+id/templatesFragment2"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.TemplatesFragment"
+        android:label="@string/invoice_templates">
+        <action
+            android:id="@+id/action_templatesFragment2_to_invoicePreviewFragment2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/invoicePreviewFragment2" />
+    </fragment>
+</navigation>

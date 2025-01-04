@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_default_notes_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/fragment_default_notes_invoices" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowInvoiceNotes"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_invoice_notes" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <EditText
+                    android:id="@+id/txtDefaultNotesInvoice"
+                    style="@style/LongTextbox"
+                    android:importantForAutofill="no" />
+
+            </LinearLayout>
+
+            <!--       <TextView
+                       style="@style/FragmentSubtitle"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/fragment_default_notes_quotations" />
+
+                   <com.google.android.material.switchmaterial.SwitchMaterial
+                       android:id="@+id/chkShowQuotationNotes"
+                       style="@style/SwitchStyle"
+                       android:text="@string/show_quotation_notes" />
+
+                   <EditText
+                       android:id="@+id/txtDefaultNotesQuotation"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:minHeight="@dimen/ListButtonOrFieldHeight"
+                       android:layout_marginStart="@dimen/FragmentLeftMargin"
+                       android:layout_marginEnd="@dimen/FragmentLeftMargin"
+                       android:background="@android:color/transparent"
+                       android:gravity="top|start"
+                       android:layout_marginTop="10dp"
+                       android:layout_marginBottom="10dp"
+                       android:importantForAutofill="no"
+                       android:inputType="textMultiLine"
+                       android:maxLines="8"
+                       android:minLines="1"
+                       android:textSize="@dimen/DefaultTextSizeSmaller"
+                       android:scrollbars="vertical" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

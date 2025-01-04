@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <style>
+        /* NB: non utilizzare display: grid; perché safari non supporta grid-template-* */
+
+        :root {
+            --primary-color: #2e9eff;
+            --primary-color-lighter: #e9f5ff;
+            --text-color-over-primary-color: #ffffff;
+            --key-value-label-color: gray;
+            --common-text-color: black;
+        }
+
+        * {
+            font-family: arial;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .error-title {
+            color: #fd6f03;
+            font-size: 35px;
+            line-height: 40px;
+        }
+
+        #errors-content {
+            display: none;
+            margin: 20px;
+        }
+
+        #error-message {
+            font-size: 12px;
+            color: gray;
+            display: none;
+        }
+
+        .key-value-container,
+        span {
+            font-size: 14px;
+        }
+
+        body {
+            color: var(--common-text-color);
+        }
+
+        .key-value-container {
+            display: table;
+            margin-top: 10px;
+        }
+
+        .key-value-row {
+            display: table-row;
+            height: 20px;
+        }
+
+        .key-value-key {
+            display: table-cell;
+            font-weight: bold;
+            color: var(--key-value-label-color);
+            padding-right: 15px;
+            white-space: pre;
+        }
+
+        .key-value-value {
+            color: var(--common-text-color);
+            display: table-cell;
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .total-value {
+            color: var(--primary-color);
+        }
+
+        .articles-th {
+            background-color: var(--primary-color);
+        }
+
+        .top-space {
+            margin-top: 20px;
+        }
+
+        .information-block {
+            background: var(--primary-color-lighter);
+            border-radius: 5px;
+
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+        }
+
+        .low-margin-left {
+            margin-left: 20px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        span {
+            line-height: 25px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        .articles-th {
+            color: var(--text-color-over-primary-color);
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        #firstTh {
+            border-radius: 5px 0 0 0;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        #lastTh {
+            border-radius: 0 5px 0 0;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--primary-color-lighter);
+        }
+
+        .articles-td,
+        .article-item-td {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .articles-td {
+            text-align: center;
+        }
+
+        .article-item-td {
+            text-align: left;
+        }
+
+        #logo {
+            height: 120px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        #signature {
+            height: 80px;
+            align-self: flex-end;
+        }
+
+        .image-block-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #paymentNotes {
+            color: gray;
+        }
+
+        .totals-container {
+            width: 200px;
+            margin-left: 10px;
+        }
+
+        .total-value {
+            font-weight: bold;
+        }
+
+        .hr-top {
+            border-top: 1px solid gray;
+            padding-top: 5px;
+        }
+
+        .hack-for-fill-td {
+            height: 1px;
+        }
+
+        thead {
+            display: table-header-group;
+        }
+
+        #watermark {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        #watermark p {
+            margin: 0 0 0 10px;
+            padding: 0;
+        }
+
+        #watermark p a {
+            text-decoration: none;
+        }
+
+        #watermark img {
+            height: 30px;
+        }
+
+        .horizontal-line {
+            height: 1px;
+            flex: 1 1 0;
+            margin-right: 10px;
+            background: var(--primary-color);
+        }
+
+        .powered-by {
+            color: gray;
+            font-weight: normal;
+            font-size: 10px;
+        }
+
+        .powered-by-app-name {
+            color: #fdc30a;
+            font-size: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div id="errors-content">
+    <h1 class="error-title">Ooops! An error occurred!</h1>
+    <h2 class="error-title">We have received the error report and we will fix that soon, stay
+        tuned!</h2>
+    <p id="error-message"></p>
+</div>
+
+<div id="invoice-content">
+
+    <div id="watermark">
+        <div class="horizontal-line"></div>
+        <img src="watermark.png"/>
+        <p><a href="https://www.fishingfrogs.com/invoices/"><span
+                class="powered-by">Powered by</span> <span
+                class="powered-by-app-name">Invoice Maker: Quick & Easy</span></a></p>
+    </div>
+
+    <div class="image-block-container">
+
+        <img src='#EASTER_EGG_LOGO#' id='logo' onerror="this.style = 'display: none'"/>
+
+        <div>
+            <h1>Invoice</h1>
+            <div class="key-value-container">
+
+                <div class="key-value-row" id='invoiceCodeField'>
+                    <div class="key-value-key">Invoice Code</div>
+                    <div class="key-value-value" id='invoiceCode'></div>
+                </div>
+
+                <div class="key-value-row" id='creationDateField'>
+                    <div class="key-value-key">Invoice Date</div>
+                    <div class="key-value-value" id='creationDate'></div>
+                </div>
+
+                <div class="key-value-row" id='expirationDateField'>
+                    <div class="key-value-key">Due Date</div>
+                    <div class="key-value-value" id='expirationDate'></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <table class="top-space">
+
+        <tr>
+
+            <td class="hack-for-fill-td">
+                <div class="information-block" id="billedByBlock">
+                    <h3>Billed By</h3>
+
+                    <span id="companyName" class="bold"></span>
+                    <span id="holderName"></span>
+                    <span id="address1"></span>
+
+                    <div class="key-value-container">
+
+                        <div class="key-value-row" id='businessNumberField'>
+                            <div class="key-value-key">Business Number</div>
+                            <div class="key-value-value" id='businessNumber'></div>
+                        </div>
+
+                        <div class="key-value-row" id='email1Field'>
+                            <div class="key-value-key">Email</div>
+                            <a class="key-value-value" id='email1'></a>
+                        </div>
+
+                        <div class="key-value-row" id='phone1Field'>
+                            <div class="key-value-key">Phone 1</div>
+                            <div class="key-value-value" id='phone1'></div>
+                        </div>
+
+                        <div class="key-value-row" id='phone2Field'>
+                            <div class="key-value-key">Phone 2</div>
+                            <div class="key-value-value" id='phone2'></div>
+                        </div>
+
+                        <div class="key-value-row" id='webSiteField'>
+                            <div class="key-value-key">Web site</div>
+                            <a class="key-value-value" id='webSite'></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </td>
+
+            <td class="hack-for-fill-td">
+                <div class="information-block low-margin-left" id='billedToBlock'>
+                    <h3>Billed To</h3>
+                    <span id="customerName" class="bold"></span>
+                    <span id="customerAddress"></span>
+
+                    <div class="key-value-container">
+                        <div class="key-value-row" id='customerEmail1Field'>
+                            <div class="key-value-key">Email</div>
+                            <a class="key-value-value" id='customerEmail1'></a>
+                        </div>
+
+                        <div class="key-value-row" id='customerPhone1Field'>
+                            <div class="key-value-key">Phone</div>
+                            <div class="key-value-value" id='customerPhone1'></div>
+                        </div>
+                    </div>
+
+                </div>
+            </td>
+
+        </tr>
+    </table>
+
+    <table id="articles-table" class="top-space">
+
+        <thead>
+        <tr>
+            <th class="articles-th" id="firstTh">Item</th>
+            <th class="articles-th">Quantity</th>
+            <th class="articles-th">Rate</th>
+            <th class="articles-th" id="lastTh">Amount</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <div class="key-value-container top-space totals-container">
+
+        <div class="key-value-row" id='partialField'>
+            <div class="key-value-key">Partial</div>
+            <div class="key-value-value" id='partialValue'></div>
+        </div>
+
+        <div class="key-value-row" id='discountField'>
+            <div class="key-value-key" id='discountLabel'>Discount</div>
+            <div class="key-value-value" id='discountValue'></div>
+        </div>
+
+        <div class="key-value-row" id='taxesField'>
+            <div class="key-value-key" id='taxesLabel'>Taxes</div>
+            <div class="key-value-value" id='taxesValue'></div>
+        </div>
+
+        <div class="key-value-row" id='totalField'>
+            <div class="key-value-key hr-top" id='totalLabel'>Total</div>
+            <div class="key-value-value total-value hr-top" id='totalValue'></div>
+        </div>
+
+    </div>
+
+    <table class="top-space">
+        <tr>
+
+            <td class="hack-for-fill-td">
+                <div id="bankDetailsBlock" class="information-block">
+                    <h4>Bank Details</h4>
+
+                    <div class="key-value-container">
+
+                        <div class="key-value-row" id='checkHolderField'>
+                            <div class="key-value-key">Check Holder</div>
+                            <div class="key-value-value" id='checkHolder'></div>
+                        </div>
+
+                        <div class="key-value-row" id='bankField'>
+                            <div class="key-value-key">Bank</div>
+                            <div class="key-value-value" id='bankDetails'></div>
+                        </div>
+
+                    </div>
+                </div>
+            </td>
+
+            <td class="hack-for-fill-td">
+                <div class="information-block low-margin-left" id="allOtherPaymentsBlock">
+
+                    <div class="key-value-container">
+
+                        <div id="paypalBlock">
+                            <div class="key-value-row" id='paypalEmailField'>
+                                <div class="key-value-key">PayPal Account</div>
+                                <a class="key-value-value" id='paypalEmail'></a>
+                            </div>
+                        </div>
+
+                        <div class="key-value-row" id='cashPaymentField'>
+                            <div class="key-value-key">Cash</div>
+                        </div>
+
+                        <div class="key-value-row" id='creditCardPaymentField'>
+                            <div class="key-value-key">Credit Card</div>
+                        </div>
+
+                        <div class="key-value-row" id='debitCardPaymentField'>
+                            <div class="key-value-key">Debit Card</div>
+                        </div>
+
+                    </div>
+                </div>
+            </td>
+
+        </tr>
+    </table>
+
+    <p id="paymentNotes"></p>
+
+    <image src="#EASTER_EGG_SIGNATURE#" id="signature"
+           onerror="this.style = 'display: none'"></image>
+
+    <p id="footerNotes"></p>
+
+    <script src="templateLoad.js"></script>
+
+</div>
+
+</body>
+
+<script>
+
+    try {
+
+        var templateDebugMode = true;
+
+        if (templateDebugMode) {
+            loadDebugMode();
+        }
+        else {
+            var rawJson = '#EASTER_EGG_JSON#';
+            var rawJsonTotals = '#EASTER_EGG_JSON_TOTALS#';
+
+            loadTemplate(rawJson, rawJsonTotals);
+        }
+
+    } catch (err) {
+        document.getElementById('errors-content').style = 'display: block';
+        document.getElementById('invoice-content').style = 'display: none';
+        document.getElementById('error-message').innerHTML = err;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+
+    <dimen name="FragmentLeftMargin">20dp</dimen>
+
+    <dimen name="CategoryItemLeftMargin">15dp</dimen>
+    <dimen name="ItemHeight">40dp</dimen>
+
+    <dimen name="MaterialLayoutFieldTopMargin">15dp</dimen>
+    <dimen name="MaterialLayoutFieldBottomMargin">15dp</dimen>
+    <dimen name="BottomDialogCornerRadius">8dp</dimen>
+    <dimen name="PremiumButtonsCornerRadius">16dp</dimen>
+
+    <dimen name="DefaultTextSize">14sp</dimen>
+    <dimen name="DefaultTextSizeSmaller">12sp</dimen>
+    <dimen name="InvoiceBadgeCornerRadius">3dp</dimen>
+    <dimen name="PremiumTextSizes">16sp</dimen>
+    <dimen name="OnBoardingTextSizes">16sp</dimen>
+
+    <dimen name="BottomPaddingForPagesWithBottomNavigationBar">2dp</dimen>
+</resources>

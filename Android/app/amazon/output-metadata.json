@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.francescobonizzi.invoiceEstimateReceiptMaker",
+  "variantName": "processAmazonResources",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "versionCode": 19,
+      "versionName": "v1.19.11.2020-AMZN",
+      "outputFile": "app-amazon.apk"
+    }
+  ]
+}

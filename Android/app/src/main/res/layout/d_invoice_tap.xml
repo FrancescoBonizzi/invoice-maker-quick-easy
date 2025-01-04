@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:id="@+id/txtDialogTitle"
+        style="@style/BottomDiaologTitleStyle"
+        tools:text="Invoice detail" />
+
+    <View style="@style/BottomDialogButtonsSeparator" />
+
+    <TextView
+        android:id="@+id/btnEditInvoice"
+        style="@style/ButtonDialogButtonText"
+        android:background="@drawable/bottom_dialog_rounded_corner_button_middle"
+        android:text="@string/edit" />
+
+    <View style="@style/BottomDialogButtonsSeparator" />
+
+    <TextView
+        android:id="@+id/btnDeleteInvoice"
+        style="@style/ButtonDialogButtonText"
+        android:background="@drawable/bottom_dialog_rounded_corner_button_end"
+        android:text="@string/delete"
+        android:textColor="@color/colorError" />
+
+    <TextView
+        android:id="@+id/btnCancelDialog"
+        style="@style/ButtonDialogButtonText"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bottom_dialog_rounded_corner_button_very_last"
+        android:text="@string/cancel" />
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigationInvoicesFragment">
+
+    <fragment
+        android:id="@+id/navigationCustomersFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.customers.CustomersFragment"
+        android:label="@string/fragment_customers_title"
+        tools:layout="@layout/f_customers">
+        <action
+            android:id="@+id/action_navigationCustomersFragment_to_customerDetailFragment"
+            app:destination="@id/customerDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationInvoicesFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.InvoicesFragment"
+        android:label="fragment_invoices"
+        tools:layout="@layout/f_invoices">
+        <action
+            android:id="@+id/action_navigationInvoicesFragment_to_invoiceDetailFragment2"
+            app:destination="@id/invoiceDetailFragment2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_navigationInvoicesFragment_to_onboardingFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/onboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationArticlesFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.articles.ArticlesFragment"
+        android:label="@string/fragment_articles_title"
+        tools:layout="@layout/f_articles">
+        <action
+            android:id="@+id/action_navigationArticlesFragment_to_articleDetailFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigationQuotationsFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.QuotationsFragment"
+        android:label="fragment_quotations"
+        tools:layout="@layout/f_quotations" />
+    <fragment
+        android:id="@+id/customerDetailFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.customers.CustomerDetailFragment"
+        android:label="@string/customer" />
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.articles.ArticleDetailFragment"
+        android:label="@string/article"
+        tools:layout="@layout/f_article_detail" />
+    <fragment
+        android:id="@+id/invoiceDetailFragment2"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.invoiceDetail.InvoiceDetailFragment"
+        android:label="@string/invoice" />
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.onboarding.OnboardingFragment"
+        android:label="OnboardingFragment">
+        <action
+            android:id="@+id/action_onboardingFragment_to_navigationInvoicesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:destination="@id/navigationInvoicesFragment" />
+    </fragment>
+
+</navigation>

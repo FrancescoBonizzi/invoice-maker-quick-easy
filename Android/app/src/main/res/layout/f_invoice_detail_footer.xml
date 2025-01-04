@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_invoice_detail_footer" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/signature" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowSignature"
+                    style="@style/SwitchStyle"
+                    android:text="@string/your_signature" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/notes" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowNotes"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_notes" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <EditText
+                    android:id="@+id/txtDefaultNotesInvoice"
+                    style="@style/LongTextbox"
+                    android:importantForAutofill="no" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

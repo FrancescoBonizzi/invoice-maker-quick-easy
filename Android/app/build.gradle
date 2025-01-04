@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
+
+android {
+
+    defaultConfig {
+        applicationId "com.francescobonizzi.invoiceEstimateReceiptMaker"
+        minSdkVersion 23
+        targetSdkVersion 33
+        versionCode 37
+        versionName "v1." + new Date().format('dd.MM.yyyy')
+    }
+
+    buildTypes {
+
+        debug {
+            versionNameSuffix '-DEBUG'
+            minifyEnabled false
+            debuggable true
+        }
+
+        release {
+            postprocessing {
+                removeUnusedCode true
+
+//              Altrimenti non posso imporre minifyEnabled a false!
+                removeUnusedResources false
+
+                obfuscate false
+                optimizeCode true
+            }
+
+            // Perché altrimenti il serializzatore JSON non funziona più.
+            minifyEnabled false
+        }
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    namespace 'com.francescobonizzi.invoiceEstimateReceiptMaker'
+    compileSdk 34
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    //noinspection DifferentStdlibGradleVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.20"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.9.0"
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    // DI: Koin
+    implementation("io.insert-koin:koin-android:2.1.6")
+
+    // Google Play per chiedere le review
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+
+    // Google Play per monetizzazione
+    implementation 'com.android.billingclient:billing-ktx:6.1.0'
+
+    // Json serializer
+    implementation 'com.google.code.gson:gson:2.10'
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // Firebase
+    implementation 'com.google.firebase:firebase-analytics:21.5.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.6.0'
+}

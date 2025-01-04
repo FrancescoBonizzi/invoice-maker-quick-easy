@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_category"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/CategoryItemLeftMargin"
+    android:paddingEnd="@dimen/CategoryItemLeftMargin"
+    tools:ignore="RtlSymmetry">
+
+    <View style="@style/CategoryItemSeparatorWithoutMargin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:textColor="@color/colorCommonText"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Bananasplit" />
+
+        <TextView
+            android:id="@+id/txtProductSingleItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start|center"
+            android:textColor="@color/colorCommonText"
+            android:textSize="12sp"
+            tools:text="€13" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="start|center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity_for_article_summary"
+                android:textColor="@color/colorDisabledButton"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtArticleQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/colorDisabledButton"
+                android:textSize="12sp"
+                tools:text="10" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtArticlePriceWithQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start|center"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="€130" />
+
+    </LinearLayout>
+
+</LinearLayout>

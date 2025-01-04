@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_payment_settings_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/payment_methods" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowCash"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_cash_payment_method" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowCreditCard"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_credit_card_payment_method" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowDebitCard"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_debit_card_payment_method" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/paypal" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowPayPalEmail"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_paypal_email" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_payment_details_paypal_email" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtPayPalEmail"
+                    style="@style/TextboxStyle"
+                    app:errorEnabled="true"
+                    app:isEmailField="true" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bank_transfer" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowBankTransferDetails"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_bank_transfer_details" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtCheckHolder"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_payment_details_check_holder" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_payment_details_bank_details" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtBankDetails"
+                    style="@style/TextboxStyle" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_notes" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowPaymentNotes"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_payment_notes" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <EditText
+                    android:id="@+id/txtPaymentNotes"
+                    style="@style/LongTextbox"
+                    android:importantForAutofill="no" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

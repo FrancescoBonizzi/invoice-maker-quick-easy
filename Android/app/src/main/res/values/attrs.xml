@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TextBoxAttributes">
+        <attr name="text" format="string" />
+        <attr name="placeholderText" format="string" />
+        <attr name="isReadOnly" format="boolean" />
+        <attr name="allowOnlyNumbers" format="boolean" />
+        <attr name="labelWidth" format="dimension" />
+        <attr name="isEmailField" format="boolean" />
+        <attr name="isPhoneNumber" format="boolean" />
+    </declare-styleable>
+
+</resources>

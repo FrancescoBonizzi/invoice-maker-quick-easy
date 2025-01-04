@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigator_settings"
+    app:startDestination="@id/settingsFragment">
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.SettingsFragment"
+        tools:layout="@layout/f_settings"
+        android:label="@string/fragment_settings_title">
+        <action
+            android:id="@+id/action_navigationSettingsFragment_to_invoicesSettingsFragment"
+            app:destination="@id/invoicesSettingsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_navigationProfileFragment_to_creditsFragment"
+            app:destination="@id/creditsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyDetailsFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.CompanyDetailsFragment"
+        tools:layout="@layout/f_settings_invoices_company"
+        android:label="@string/fragment_company_settings_title" />
+    <fragment
+        android:id="@+id/taxesFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.TaxesFragment"
+        tools:layout="@layout/f_settings_invoices_taxes"
+        android:label="@string/fragment_taxes_settings_title" />
+    <fragment
+        android:id="@+id/discountFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.DiscountFragment"
+        android:label="@string/discount" />
+    <fragment
+        android:id="@+id/regionalSettingsFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.RegionalSettingsFragment"
+        tools:layout="@layout/f_settings_invoices_region"
+        android:label="@string/fragment_regional_settings_title" />
+    <fragment
+        android:id="@+id/invoicesSettingsFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.InvoicesSettingsFragment"
+        tools:layout="@layout/f_settings_invoices"
+        android:label="@string/fragment_settings_invoices_settings">
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_companySettingsFragment"
+            app:destination="@id/companyDetailsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_defaultNotesFragment"
+            app:destination="@id/defaultNotesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_paymentSettingsFragment"
+            app:destination="@id/paymentDetailsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_regionalSettingsFragment"
+            app:destination="@id/regionalSettingsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_taxSettingsFragment"
+            app:destination="@id/taxesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_invoiceNumberFragment"
+            app:destination="@id/invoiceNumberFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_logoAndSignatureFragment"
+            app:destination="@id/logoAndSignatureFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_datesFragment"
+            app:destination="@id/datesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_discountFragment"
+            app:destination="@id/discountFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_invoicesSettingsFragment_to_templatesFragment"
+            app:destination="@id/templatesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/logoAndSignatureFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.LogoAndSignatureFragment"
+        android:label="@string/fragment_logo_and_signature_title" />
+    <fragment
+        android:id="@+id/invoiceNumberFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.InvoiceQuotationCodeFragment"
+        tools:layout="@layout/f_settings_invoices_invoice_quotation_code"
+        android:label="@string/fragment_invoice_number_title" />
+    <fragment
+        android:id="@+id/templatesFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.TemplatesFragment"
+        android:label="@string/invoice_templates">
+        <action
+            android:id="@+id/action_templatesFragment_to_invoicePreviewFragment"
+            app:destination="@id/invoicePreviewFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentDetailsFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.PaymentDetailsFragment"
+        tools:layout="@layout/f_settings_invoices_payment"
+        android:label="@string/fragment_payment_settings_title" />
+    <fragment
+        android:id="@+id/invoicePreviewFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.InvoicePreviewFragment"
+        android:label="@string/invoice_preview" />
+    <fragment
+        android:id="@+id/datesFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.DatesFragment"
+        android:label="@string/dates" />
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.CreditsFragment"
+        android:label="CreditsFragment" />
+    <fragment
+        android:id="@+id/defaultNotesFragment"
+        android:name="com.francescobonizzi.invoiceEstimateReceiptMaker.pages.settings.invoicesSettings.DefaultNotesFragment"
+        tools:layout="@layout/f_settings_invoices_notes"
+        android:label="@string/fragment_default_notes_title" />
+</navigation>

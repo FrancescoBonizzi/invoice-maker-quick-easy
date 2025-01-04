@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_invoice_detail_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/customer" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowCustomerName"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_customer_name" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/invoice" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowInvoiceCode"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_invoice_code" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtInvoiceCode"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/invoice_code" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowInvoiceCreationDate"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_invoice_creation_date" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtInvoiceCreationDate"
+                    style="@style/TextboxStyle"
+                    app:isReadOnly="true"
+                    app:placeholderText="@string/invoice_creation_date_no_semicolon"
+                    tools:text="05/08/1990" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowInvoiceExpirationDate"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_invoice_expiration_date" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtInvoiceExpirationDate"
+                    style="@style/TextboxStyle"
+                    app:isReadOnly="true"
+                    app:placeholderText="@string/invoice_expiration_date"
+                    tools:text="05/08/1990" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/company_details" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowYourCompanyDetails"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_your_company_details" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtCompanyName"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_company_details_company_name" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtCompanyHolderName"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_company_details_company_holder_name" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtVATNumber"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_company_details_vat_number" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/company_address" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtAddress1"
+                    style="@style/TextboxStyle" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/company_contacts" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtPhone1"
+                    style="@style/TextboxStyle"
+                    app:isPhoneNumber="true"
+                    app:placeholderText="@string/fragment_company_details_phone_number_1" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtPhone2"
+                    app:isPhoneNumber="true"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_company_details_phone_number_2" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/fragment_company_details_email_address_1" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtEmail1"
+                    style="@style/TextboxStyle"
+                    app:isEmailField="true" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/fragment_company_details_website_url" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtWebsite"
+                    style="@style/TextboxStyle" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/company_logo" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowYourCompanyLogo"
+                    style="@style/SwitchStyle"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/show_your_company_logo" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

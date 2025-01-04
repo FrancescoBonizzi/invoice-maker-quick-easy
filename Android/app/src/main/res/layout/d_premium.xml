@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/bottom_dialog_premium_top_rounded_corner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPremiumDialogBackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/premium"
+            android:textAlignment="center"
+            android:textColor="@color/colorCommonText"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_premium_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtUpgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upgrade"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorCommonText"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_premium_button"
+                android:text="@string/pro"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/PremiumTextSizes"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtMainText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_unlimited_invoices"
+            android:textAlignment="center"
+            android:textColor="@color/colorCommonText"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:orientation="vertical"
+            android:rowCount="2">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="0"
+                android:layout_rowSpan="2"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:indeterminate="true"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btnGetPremium"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/background_premium_button"
+                android:elevation="10dp"
+                android:padding="15dp"
+                android:text="@string/unlock_premium"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/PremiumTextSizes"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCancelDialog"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bottom_dialog_premium_button_cancel"
+                android:elevation="10dp"
+
+                android:padding="15dp"
+                android:text="@string/cancel"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/PremiumTextSizes" />
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

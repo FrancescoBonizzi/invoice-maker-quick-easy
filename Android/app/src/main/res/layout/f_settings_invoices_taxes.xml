@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_taxes_settings_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/taxes_application" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkApplyTaxes"
+                    style="@style/SwitchStyle"
+                    android:text="@string/apply_taxes" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtTaxLabel"
+                    style="@style/TextboxStyle"
+                    app:labelWidth="110dp"
+                    app:placeholderText="@string/fragment_taxes_tax_label" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtTaxPercentage"
+                    style="@style/TextboxStyle"
+                    app:allowOnlyNumbers="true"
+                    app:labelWidth="110dp"
+                    app:placeholderText="@string/fragment_taxes_tax_percentage" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

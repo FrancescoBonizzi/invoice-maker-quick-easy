@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dates" />
+
+
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".pages.settings.invoicesSettings.InvoiceQuotationCodeFragment">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/invoice_dates" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowInvoiceCreationDate"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_invoice_creation_date" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowInvoiceExpirationDate"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_invoice_expiration_date" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtInvoiceExpirationDays"
+                    style="@style/TextboxStyle"
+                    app:allowOnlyNumbers="true"
+                    app:labelWidth="180dp"
+                    app:placeholderText="Invoice expiration days" />
+
+            </LinearLayout>
+
+            <!--       <TextView
+                       style="@style/FragmentSubtitle"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/quotations" />
+
+                   <com.google.android.material.switchmaterial.SwitchMaterial
+                       android:id="@+id/chkShowQuotationCreationDate"
+                       style="@style/SwitchStyle"
+                       android:text="@string/show_quotation_creation_date" />
+
+                   <View style="@style/ButtonsListSeparator" />
+
+                   <com.google.android.material.switchmaterial.SwitchMaterial
+                       android:id="@+id/chkShowQuotationExpirationDate"
+                       style="@style/SwitchStyle"
+                       android:text="@string/show_quotation_expiration_date" />
+
+                   <View style="@style/ButtonsListSeparator" />
+
+                   <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                       android:id="@+id/txtQuotationExpirationDays"
+                       android:layout_width="match_parent"
+                       android:layout_height="@dimen/ListButtonOrFieldHeight"
+                       android:layout_marginStart="@dimen/FragmentLeftMargin"
+                       android:layout_marginEnd="@dimen/FragmentLeftMargin"
+                       app:allowOnlyNumbers="true"
+                       app:placeholderText="Quotation expiration days" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

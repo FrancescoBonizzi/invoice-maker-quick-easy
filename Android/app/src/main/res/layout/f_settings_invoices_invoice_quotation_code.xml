@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_invoice_number_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/invoice_code" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowInvoiceCode"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_invoice_code" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtInvoicePrefix"
+                    style="@style/TextboxStyle"
+                    app:labelWidth="180dp"
+                    app:placeholderText="@string/fragment_invoice_number_invoice_prefix_code" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtInvoiceStartingNumber"
+                    style="@style/TextboxStyle"
+                    app:allowOnlyNumbers="true"
+                    app:labelWidth="180dp"
+                    app:placeholderText="@string/fragment_invoice_number_starting_number" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtInvoiceCodeExample"
+                    style="@style/TextboxStyle"
+                    app:isReadOnly="true"
+                    app:labelWidth="180dp"
+                    app:placeholderText="@string/example_code" />
+
+            </LinearLayout>
+
+            <!--     <TextView
+                     style="@style/FragmentSubtitle"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/quotation_code" />
+
+                 <com.google.android.material.switchmaterial.SwitchMaterial
+                     android:id="@+id/chkShowQuotationCode"
+                     style="@style/SwitchStyle"
+                     android:text="@string/show_quotation_code" />
+
+                 <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                     android:id="@+id/txtQuotationPrefix"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/ListButtonOrFieldHeight"
+                     android:layout_marginStart="@dimen/FragmentLeftMargin"
+                     android:layout_marginEnd="@dimen/FragmentLeftMargin"
+                     app:placeholderText="@string/fragment_invoice_number_quotation_prefix_code" />
+
+                 <View style="@style/ButtonsListSeparator" />
+
+                 <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                     android:id="@+id/txtQuotationStartingNumber"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/ListButtonOrFieldHeight"
+                     android:layout_marginStart="@dimen/FragmentLeftMargin"
+                     android:layout_marginEnd="@dimen/FragmentLeftMargin"
+                     app:allowOnlyNumbers="true"
+                     app:placeholderText="@string/fragment_invoice_number_quotation_starting_number" />
+
+                 <View style="@style/ButtonsListSeparator" />
+
+                 <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                     android:id="@+id/txtQuotationCodeExample"
+                     android:layout_width="match_parent"
+                     app:isReadOnly="true"
+                     android:layout_height="@dimen/ListButtonOrFieldHeight"
+                     android:layout_marginStart="@dimen/FragmentLeftMargin"
+                     android:layout_marginEnd="@dimen/FragmentLeftMargin"
+                     app:placeholderText="@string/example_code" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

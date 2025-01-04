@@ -1,0 +1,190 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/statusBarBackgroundColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="FragmentTitle">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">@dimen/FragmentLeftMargin</item>
+    </style>
+
+    <style name="FragmentTitleForInternalPage">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/colorCommonText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/FragmentLeftMargin</item>
+    </style>
+
+    <style name="CategoryTitle">
+        <item name="android:textColor">@color/colorCategoryTitle</item>
+        <item name="android:textSize">@dimen/DefaultTextSizeSmaller</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginStart">37dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ListLikeButton">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_height">@dimen/ItemHeight</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ListLikeInvoiceInformation">
+        <item name="android:layout_height">@dimen/ItemHeight</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:layout_marginStart">@dimen/FragmentLeftMargin</item>
+        <item name="android:layout_marginEnd">@dimen/FragmentLeftMargin</item>
+    </style>
+
+    <!-- Ho fatto la distinzione per mantenere i colori originali dell'icona colorata -->
+    <style name="ListLikeButtonLeftIconCanDisable">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_marginStart">@dimen/FragmentLeftMargin</item>
+        <item name="tint">@drawable/list_like_button_icon_color_selector</item>
+    </style>
+
+    <!-- Ho fatto la distinzione per mantenere i colori originali dell'icona colorata -->
+    <style name="ListLikeButtonLeftIconCannotDisable">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_marginStart">@dimen/FragmentLeftMargin</item>
+    </style>
+
+    <style name="ListLikeButtonRightIcon">
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_marginEnd">@dimen/FragmentLeftMargin</item>
+        <item name="tint">@drawable/list_like_button_icon_color_selector</item>
+    </style>
+
+    <style name="ListLikeButtonText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@drawable/list_like_button_text_color_selector</item>
+    </style>
+
+    <style name="CategoryItemSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">@dimen/CategoryItemLeftMargin</item>
+        <item name="android:background">@color/colorItemSeparator</item>
+    </style>
+
+    <style name="CategoryItemSeparatorWithoutMargin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorItemSeparator</item>
+    </style>
+
+    <style name="BottomDialogButtonsSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#BABAB8</item>
+    </style>
+
+    <style name="BottomDiaologTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#767772</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:background">@drawable/bottom_dialog_rounded_corner_button_first</item>
+    </style>
+
+    <style name="ButtonDialogButtonText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBottomDialogDefaultButton</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="OnBoardingTitleStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#878787</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CategoryBlock">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:background">@drawable/background_category</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="TextboxStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ItemHeight</item>
+        <item name="android:textColor">@color/colorCommonText</item>
+        <item name="android:layout_marginStart">@dimen/CategoryItemLeftMargin</item>
+        <item name="android:layout_marginEnd">@dimen/CategoryItemLeftMargin</item>
+    </style>
+
+    <style name="SwitchStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ItemHeight</item>
+        <item name="android:textColor">@color/colorCommonText</item>
+        <item name="android:layout_marginStart">@dimen/CategoryItemLeftMargin</item>
+        <item name="android:layout_marginEnd">@dimen/CategoryItemLeftMargin</item>
+    </style>
+
+    <style name="LongTextbox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/CategoryItemLeftMargin</item>
+        <item name="android:layout_marginEnd">@dimen/CategoryItemLeftMargin</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:maxLines">8</item>
+        <item name="android:minHeight">@dimen/ItemHeight</item>
+        <item name="android:minLines">1</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textSize">@dimen/DefaultTextSizeSmaller</item>
+    </style>
+
+    <style name="SpinnerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ItemHeight</item>
+        <item name="android:layout_marginStart">@dimen/CategoryItemLeftMargin</item>
+        <item name="android:layout_marginEnd">@dimen/CategoryItemLeftMargin</item>
+        <item name="android:spinnerMode">dialog</item>
+    </style>
+
+    <style name="NoItemsStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+</resources>

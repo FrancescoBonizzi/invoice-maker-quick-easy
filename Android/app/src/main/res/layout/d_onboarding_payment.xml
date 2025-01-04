@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/bottom_dialog_onboarding_top_rounded_corner" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/OnBoardingTitleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_section" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/onboarding_payments_title"
+            android:textAlignment="center"
+            android:textColor="@color/colorCommonText"
+            android:textSize="@dimen/OnBoardingTextSizes" />
+
+        <Button
+            android:id="@+id/btnPayPal"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bottom_dialog_primary_color_button"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:text="@string/paypal"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/PremiumTextSizes" />
+
+        <Button
+            android:id="@+id/btnBankTransfer"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bottom_dialog_primary_color_button"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:text="@string/bank_transfer"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/PremiumTextSizes" />
+
+        <Button
+            android:id="@+id/btnCash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bottom_dialog_primary_color_button"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:text="@string/cash"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/PremiumTextSizes" />
+
+        <Button
+            android:id="@+id/btnCreditCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bottom_dialog_primary_color_button"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:text="@string/credit_card"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/PremiumTextSizes" />
+
+        <Button
+            android:id="@+id/btnDebitCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bottom_dialog_primary_color_button"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:text="@string/debit_card"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/PremiumTextSizes" />
+
+        <Button
+            android:id="@+id/btnSkip"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bottom_dialog_premium_button_cancel"
+            android:elevation="10dp"
+            android:padding="15dp"
+            android:text="@string/skip"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/PremiumTextSizes" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/bottom_dialog_onboarding_bottom_rounded_corner" />
+
+</LinearLayout>

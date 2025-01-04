@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_settings_invoices_settings" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView style="@style/CategoryTitle" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <LinearLayout
+                    android:id="@+id/btnRegionalSettings"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_regional_settings_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnCompanyDetails"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_company_settings_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnPaymentDetails"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_payment_settings_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnTaxes"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_taxes_settings_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnDiscount"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_discount_settings_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnLogoAndSignature"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_logo_and_signature_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnDefaultNotes"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_default_notes_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnInvoiceNumber"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/fragment_invoice_number_title" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnDates"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/dates" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/btnTemplates"
+                    style="@style/ListLikeButton"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:text="@string/invoice_templates" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

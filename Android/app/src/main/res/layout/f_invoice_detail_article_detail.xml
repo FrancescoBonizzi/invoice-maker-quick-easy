@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        android:id="@+id/txtArticleDetailTitle"
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invoice_article" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/details" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtArticleName"
+                    style="@style/TextboxStyle"
+                    android:imeOptions="actionNext"
+                    app:labelWidth="110dp"
+                    app:placeholderText="@string/name" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtArticleDescription"
+                    style="@style/TextboxStyle"
+                    android:imeOptions="actionNext"
+                    app:labelWidth="110dp"
+                    app:placeholderText="@string/description" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtArticlePrice"
+                    style="@style/TextboxStyle"
+                    android:imeOptions="actionNext"
+                    app:allowOnlyNumbers="true"
+                    app:labelWidth="110dp"
+                    app:placeholderText="@string/price" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtArticleQuantity"
+                    style="@style/TextboxStyle"
+                    android:imeOptions="actionDone"
+                    app:allowOnlyNumbers="true"
+                    app:labelWidth="110dp"
+                    app:placeholderText="@string/quantity" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtArticleTotal"
+                    style="@style/TextboxStyle"
+                    app:isReadOnly="true"
+                    app:labelWidth="110dp"
+                    app:placeholderText="@string/total" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

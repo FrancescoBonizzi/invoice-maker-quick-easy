@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_company_settings_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".pages.settings.invoicesSettings.CompanyDetailsFragment">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/company_details" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowYourCompanyDetails"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_your_company_details" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtCompanyName"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_company_details_company_name" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtCompanyHolderName"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_company_details_company_holder_name" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtVATNumber"
+                    style="@style/TextboxStyle"
+                    app:placeholderText="@string/fragment_company_details_vat_number" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/company_address" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtAddress1"
+                    style="@style/TextboxStyle" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/company_contacts" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtPhone1"
+                    style="@style/TextboxStyle"
+                    app:isPhoneNumber="true"
+                    app:placeholderText="@string/fragment_company_details_phone_number_1" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtPhone2"
+                    style="@style/TextboxStyle"
+                    app:isPhoneNumber="true"
+                    app:placeholderText="@string/fragment_company_details_phone_number_2" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/fragment_company_details_email_address_1" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtEmail1"
+                    style="@style/TextboxStyle"
+                    app:isEmailField="true" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/fragment_company_details_website_url" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.TextBox
+                    android:id="@+id/txtWebsite"
+                    style="@style/TextboxStyle" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

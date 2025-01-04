@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_logo_and_signature_title" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/fragment_logo_and_signature_company_logo" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowYourCompanyLogo"
+                    style="@style/SwitchStyle"
+                    android:text="@string/show_your_company_logo" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/logoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/FragmentLeftMargin"
+                    android:layout_marginTop="@dimen/MaterialLayoutFieldTopMargin"
+                    android:layout_marginEnd="@dimen/FragmentLeftMargin"
+                    android:layout_marginBottom="@dimen/MaterialLayoutFieldBottomMargin"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/imgCompanyLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:contentDescription="@string/fragment_logo_and_signature_the_signature_logo_image_description"
+                        android:src="@drawable/ic_picture" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/fragment_logo_and_signature_signature" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/chkShowSignature"
+                    style="@style/SwitchStyle"
+                    android:text="@string/your_signature" />
+
+                <View style="@style/CategoryItemSeparator" />
+
+                <LinearLayout
+                    android:id="@+id/signatureContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/FragmentLeftMargin"
+                    android:layout_marginTop="@dimen/MaterialLayoutFieldTopMargin"
+                    android:layout_marginEnd="@dimen/FragmentLeftMargin"
+                    android:layout_marginBottom="@dimen/MaterialLayoutFieldBottomMargin"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/imgSignature"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:contentDescription="@string/fragment_logo_and_signature_the_signature_signature_image_description"
+                        android:src="@drawable/ic_signature" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

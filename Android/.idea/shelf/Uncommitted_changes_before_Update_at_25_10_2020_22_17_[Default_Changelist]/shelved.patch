@@ -1,0 +1,295 @@
+Index: app/src/main/res/layout/ad_spinner_item_currency.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\"\r\n        android:padding=\"10dp\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/spinner_item_currency_txtSymbol\"\r\n            android:layout_width=\"110dp\"\r\n            android:layout_height=\"20dp\"\r\n            android:ellipsize=\"marquee\"\r\n            android:singleLine=\"true\"\r\n            android:textSize=\"@dimen/DefaultTextSize\"\r\n            android:textStyle=\"bold\"\r\n            tools:text=\"EUR\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/spinner_item_currency_txtNationality\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"20dp\"\r\n            android:ellipsize=\"marquee\"\r\n            android:singleLine=\"true\"\r\n            android:textSize=\"@dimen/DefaultTextSize\"\r\n            tools:text=\"Europa\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <View style=\"@style/ItemsListSeparator\" />\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/ad_spinner_item_currency.xml	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/res/layout/ad_spinner_item_currency.xml	(date 1603660555061)
+@@ -32,6 +32,6 @@
+ 
+     </LinearLayout>
+ 
+-    <View style="@style/ItemsListSeparator" />
++    <View style="@style/CategoryItemSeparatorWithoutMargin" />
+ 
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/ad_invoice_article.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:background=\"@drawable/background_category\"\r\n    android:orientation=\"vertical\"\r\n    android:paddingStart=\"@dimen/CategoryItemLeftMargin\"\r\n    android:paddingEnd=\"@dimen/CategoryItemLeftMargin\"\r\n    tools:ignore=\"RtlSymmetry\">\r\n\r\n    <View style=\"@style/ItemsListSeparator\" />\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:paddingTop=\"6dp\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/txtProductName\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_weight=\"1\"\r\n            android:ellipsize=\"marquee\"\r\n            android:gravity=\"start|bottom\"\r\n            android:singleLine=\"true\"\r\n            android:textColor=\"@color/colorCommonText\"\r\n            android:textSize=\"18sp\"\r\n            android:textStyle=\"bold\"\r\n            tools:text=\"Bananasplit\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/txtProductSingleItemPrice\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"match_parent\"\r\n            android:gravity=\"start|center\"\r\n            android:textColor=\"@color/colorCommonText\"\r\n            android:textSize=\"12sp\"\r\n            tools:text=\"€13\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:paddingBottom=\"6dp\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_weight=\"1\"\r\n            android:gravity=\"start|center\">\r\n\r\n            <TextView\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:text=\"@string/quantity_for_article_summary\"\r\n                android:textColor=\"@color/colorDisabledButton\"\r\n                android:textSize=\"12sp\" />\r\n\r\n            <TextView\r\n                android:id=\"@+id/txtArticleQuantity\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginStart=\"4dp\"\r\n                android:textColor=\"@color/colorDisabledButton\"\r\n                android:textSize=\"12sp\"\r\n                tools:text=\"10\" />\r\n\r\n        </LinearLayout>\r\n\r\n        <TextView\r\n            android:id=\"@+id/txtArticlePriceWithQuantity\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"match_parent\"\r\n            android:gravity=\"start|center\"\r\n            android:singleLine=\"true\"\r\n            android:textColor=\"@color/colorPrimary\"\r\n            android:textSize=\"18sp\"\r\n            android:textStyle=\"bold\"\r\n            tools:text=\"€130\" />\r\n\r\n    </LinearLayout>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/ad_invoice_article.xml	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/res/layout/ad_invoice_article.xml	(date 1603660555064)
+@@ -9,7 +9,7 @@
+     android:paddingEnd="@dimen/CategoryItemLeftMargin"
+     tools:ignore="RtlSymmetry">
+ 
+-    <View style="@style/ItemsListSeparator" />
++    <View style="@style/CategoryItemSeparatorWithoutMargin" />
+ 
+     <LinearLayout
+         android:layout_width="match_parent"
+Index: app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/customControls/DividerItemsDecorator.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/customControls/DividerItemsDecorator.kt	(date 1603659901741)
++++ app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/customControls/DividerItemsDecorator.kt	(date 1603659901741)
+@@ -0,0 +1,27 @@
++package com.francescobonizzi.invoiceEstimateReceiptMaker.customControls
++
++import android.graphics.Canvas
++import android.graphics.drawable.Drawable
++import android.view.View
++import androidx.recyclerview.widget.RecyclerView
++import androidx.recyclerview.widget.RecyclerView.ItemDecoration
++
++/** Il divider di default disegna sempre una riga dopo l'ultimo elemento! >.< */
++class DividerItemDecorator(private val mDivider: Drawable) : ItemDecoration()
++{
++    override fun onDrawOver(canvas: Canvas, parent: RecyclerView, state: RecyclerView.State)
++    {
++        val dividerLeft = parent.paddingLeft
++        val dividerRight = parent.width - parent.paddingRight
++        val childCount = parent.childCount
++        for (i in 0..childCount - 2)
++        {
++            val child: View = parent.getChildAt(i)
++            val params = child.layoutParams as RecyclerView.LayoutParams
++            val dividerTop: Int = child.bottom + params.bottomMargin
++            val dividerBottom = dividerTop + mDivider.intrinsicHeight
++            mDivider.setBounds(dividerLeft, dividerTop, dividerRight, dividerBottom)
++            mDivider.draw(canvas)
++        }
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/drawable/recyclerview_items_divider.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable/recyclerview_items_divider.xml	(date 1603660372811)
++++ app/src/main/res/drawable/recyclerview_items_divider.xml	(date 1603660372811)
+@@ -0,0 +1,4 @@
++<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
++    <solid android:color="@color/colorItemSeparator"/>
++    <size android:height="1dp"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/values/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n\r\n    <style name=\"AppTheme\" parent=\"Theme.AppCompat.Light.DarkActionBar\">\r\n        <item name=\"colorPrimary\">@color/colorPrimary</item>\r\n        <item name=\"colorPrimaryDark\">@color/colorPrimaryDark</item>\r\n        <item name=\"colorAccent\">@color/colorAccent</item>\r\n        <item name=\"android:statusBarColor\">@color/statusBarBackgroundColor</item>\r\n        <item name=\"android:windowLightStatusBar\">true</item>\r\n    </style>\r\n\r\n    <style name=\"FragmentTitle\">\r\n        <item name=\"android:textSize\">34sp</item>\r\n        <item name=\"android:textStyle\">bold</item>\r\n        <item name=\"android:textColor\">#000000</item>\r\n        <item name=\"android:layout_marginTop\">30dp</item>\r\n        <item name=\"android:layout_marginBottom\">10dp</item>\r\n        <item name=\"android:layout_marginLeft\">@dimen/FragmentLeftMargin</item>\r\n    </style>\r\n\r\n    <style name=\"FragmentTitleForInternalPage\">\r\n        <item name=\"android:textSize\">30sp</item>\r\n        <item name=\"android:textColor\">@color/colorCommonText</item>\r\n        <item name=\"android:textStyle\">bold</item>\r\n        <item name=\"android:layout_marginLeft\">@dimen/FragmentLeftMargin</item>\r\n    </style>\r\n\r\n    <style name=\"CategoryTitle\">\r\n        <item name=\"android:textColor\">@color/colorCategoryTitle</item>\r\n        <item name=\"android:textSize\">@dimen/DefaultTextSizeSmaller</item>\r\n        <item name=\"android:layout_marginTop\">30dp</item>\r\n        <item name=\"android:layout_marginBottom\">5dp</item>\r\n        <item name=\"android:layout_marginStart\">37dp</item>\r\n        <item name=\"android:textAllCaps\">true</item>\r\n        <item name=\"android:layout_width\">wrap_content</item>\r\n        <item name=\"android:layout_height\">wrap_content</item>\r\n    </style>\r\n\r\n    <style name=\"ListLikeButton\">\r\n        <item name=\"android:clickable\">true</item>\r\n        <item name=\"android:focusable\">true</item>\r\n        <item name=\"android:layout_height\">@dimen/ItemHeight</item>\r\n        <item name=\"android:gravity\">center</item>\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:background\">?android:attr/selectableItemBackground</item>\r\n    </style>\r\n\r\n    <style name=\"ListLikeInvoiceInformation\">\r\n        <item name=\"android:layout_height\">@dimen/ItemHeight</item>\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:gravity\">center</item>\r\n        <item name=\"android:background\">?android:attr/selectableItemBackground</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/FragmentLeftMargin</item>\r\n        <item name=\"android:layout_marginEnd\">@dimen/FragmentLeftMargin</item>\r\n    </style>\r\n\r\n    <!-- Ho fatto la distinzione per mantenere i colori originali dell'icona colorata -->\r\n    <style name=\"ListLikeButtonLeftIconCanDisable\">\r\n        <item name=\"android:layout_height\">20dp</item>\r\n        <item name=\"android:layout_width\">20dp</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/FragmentLeftMargin</item>\r\n        <item name=\"tint\">@drawable/list_like_button_icon_color_selector</item>\r\n    </style>\r\n\r\n    <!-- Ho fatto la distinzione per mantenere i colori originali dell'icona colorata -->\r\n    <style name=\"ListLikeButtonLeftIconCannotDisable\">\r\n        <item name=\"android:layout_height\">20dp</item>\r\n        <item name=\"android:layout_width\">20dp</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/FragmentLeftMargin</item>\r\n    </style>\r\n\r\n    <style name=\"ListLikeButtonRightIcon\">\r\n        <item name=\"android:layout_height\">16dp</item>\r\n        <item name=\"android:layout_width\">16dp</item>\r\n        <item name=\"android:layout_marginEnd\">@dimen/FragmentLeftMargin</item>\r\n        <item name=\"tint\">@drawable/list_like_button_icon_color_selector</item>\r\n    </style>\r\n\r\n    <style name=\"ListLikeButtonText\">\r\n        <item name=\"android:layout_width\">0dp</item>\r\n        <item name=\"android:layout_height\">wrap_content</item>\r\n        <item name=\"android:layout_marginStart\">15dp</item>\r\n        <item name=\"android:layout_weight\">1</item>\r\n        <item name=\"android:textColor\">@drawable/list_like_button_text_color_selector</item>\r\n    </style>\r\n\r\n    <style name=\"CategoryItemSeparator\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">1dp</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/CategoryItemLeftMargin</item>\r\n        <item name=\"android:background\">@color/colorItemSeparator</item>\r\n    </style>\r\n\r\n    <style name=\"ItemsListSeparator\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">2dp</item>\r\n        <item name=\"android:background\">#f7f4f8</item>\r\n    </style>\r\n\r\n    <style name=\"BottomDialogButtonsSeparator\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">1dp</item>\r\n        <item name=\"android:background\">#BABAB8</item>\r\n    </style>\r\n\r\n    <style name=\"BottomDiaologTitleStyle\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">wrap_content</item>\r\n        <item name=\"android:textColor\">#767772</item>\r\n        <item name=\"android:textAlignment\">center</item>\r\n        <item name=\"android:padding\">10dp</item>\r\n        <item name=\"android:textSize\">11sp</item>\r\n        <item name=\"android:background\">@drawable/bottom_dialog_rounded_corner_button_first</item>\r\n    </style>\r\n\r\n    <style name=\"ButtonDialogButtonText\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">wrap_content</item>\r\n        <item name=\"android:textColor\">@color/colorBottomDialogDefaultButton</item>\r\n        <item name=\"android:textAlignment\">center</item>\r\n        <item name=\"android:padding\">15dp</item>\r\n        <item name=\"android:textSize\">16sp</item>\r\n        <item name=\"android:clickable\">true</item>\r\n        <item name=\"android:focusable\">true</item>\r\n    </style>\r\n\r\n    <style name=\"OnBoardingTitleStyle\">\r\n        <item name=\"android:textSize\">22sp</item>\r\n        <item name=\"android:textColor\">#878787</item>\r\n        <item name=\"android:textStyle\">bold</item>\r\n    </style>\r\n\r\n    <style name=\"CategoryBlock\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">wrap_content</item>\r\n        <item name=\"android:layout_marginStart\">20dp</item>\r\n        <item name=\"android:layout_marginEnd\">20dp</item>\r\n        <item name=\"android:background\">@drawable/background_category</item>\r\n        <item name=\"android:orientation\">vertical</item>\r\n    </style>\r\n\r\n    <style name=\"TextboxStyle\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">@dimen/ItemHeight</item>\r\n        <item name=\"android:textColor\">@color/colorCommonText</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/CategoryItemLeftMargin</item>\r\n        <item name=\"android:layout_marginEnd\">@dimen/CategoryItemLeftMargin</item>\r\n    </style>\r\n\r\n    <style name=\"SwitchStyle\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">@dimen/ItemHeight</item>\r\n        <item name=\"android:textColor\">@color/colorCommonText</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/CategoryItemLeftMargin</item>\r\n        <item name=\"android:layout_marginEnd\">@dimen/CategoryItemLeftMargin</item>\r\n    </style>\r\n\r\n    <style name=\"LongTextbox\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">wrap_content</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/CategoryItemLeftMargin</item>\r\n        <item name=\"android:layout_marginEnd\">@dimen/CategoryItemLeftMargin</item>\r\n        <item name=\"android:background\">@android:color/transparent</item>\r\n        <item name=\"android:gravity\">top|start</item>\r\n        <item name=\"android:inputType\">textMultiLine</item>\r\n        <item name=\"android:maxLines\">8</item>\r\n        <item name=\"android:minHeight\">@dimen/ItemHeight</item>\r\n        <item name=\"android:minLines\">1</item>\r\n        <item name=\"android:scrollbars\">vertical</item>\r\n        <item name=\"android:textSize\">@dimen/DefaultTextSizeSmaller</item>\r\n    </style>\r\n\r\n    <style name=\"SpinnerStyle\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">@dimen/ItemHeight</item>\r\n        <item name=\"android:layout_marginStart\">@dimen/CategoryItemLeftMargin</item>\r\n        <item name=\"android:layout_marginEnd\">@dimen/CategoryItemLeftMargin</item>\r\n        <item name=\"android:spinnerMode\">dialog</item>\r\n    </style>\r\n\r\n    <style name=\"NoItemsStyle\">\r\n        <item name=\"android:layout_width\">match_parent</item>\r\n        <item name=\"android:layout_height\">wrap_content</item>\r\n        <item name=\"android:textAlignment\">center</item>\r\n        <item name=\"android:textColor\">@color/colorPrimary</item>\r\n        <item name=\"android:textStyle\">bold</item>\r\n        <item name=\"android:textSize\">24sp</item>\r\n    </style>\r\n\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/res/values/styles.xml	(date 1603660541408)
+@@ -90,10 +90,10 @@
+         <item name="android:background">@color/colorItemSeparator</item>
+     </style>
+ 
+-    <style name="ItemsListSeparator">
++    <style name="CategoryItemSeparatorWithoutMargin">
+         <item name="android:layout_width">match_parent</item>
+-        <item name="android:layout_height">2dp</item>
+-        <item name="android:background">#f7f4f8</item>
++        <item name="android:layout_height">1dp</item>
++        <item name="android:background">@color/colorItemSeparator</item>
+     </style>
+ 
+     <style name="BottomDialogButtonsSeparator">
+Index: app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/adapters/ArticleAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.francescobonizzi.invoiceEstimateReceiptMaker.adapters\r\n\r\nimport android.annotation.SuppressLint\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.TextView\r\nimport androidx.recyclerview.widget.RecyclerView\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.R\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.domain.Article\r\nimport kotlinx.android.synthetic.main.ad_article.view.*\r\nimport java.text.NumberFormat\r\n\r\n/** Template item della RecycleView */\r\nclass ArticleAdapter(\r\n    private val _articles: MutableList<Article>,\r\n    private val _numberFormat: NumberFormat\r\n) :\r\n    RecyclerView.Adapter<ArticleAdapter.MyViewHolder>()\r\n{\r\n    class MyViewHolder(view: View) :\r\n\r\n        RecyclerView.ViewHolder(view)\r\n    {\r\n        val txtName: TextView = view.txtArticleName\r\n        val txtSingleItemPrice: TextView = view.txtArticleSingleItemPrice\r\n        val txtArticleDescription: TextView = view.txtArticleDescription\r\n    }\r\n\r\n    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder\r\n    {\r\n        val context = parent.context\r\n        val inflater = LayoutInflater.from(context)\r\n        val itemLayout = inflater.inflate(R.layout.ad_article, parent, false)\r\n\r\n        return MyViewHolder(itemLayout)\r\n    }\r\n\r\n    @SuppressLint(\"SetTextI18n\")\r\n    override fun onBindViewHolder(holder: MyViewHolder, position: Int)\r\n    {\r\n        val currentArticle = _articles[position]\r\n        holder.txtName.text = currentArticle.name\r\n        holder.txtSingleItemPrice.text = _numberFormat.format(currentArticle.singleItemPrice)\r\n        holder.txtArticleDescription.text = currentArticle.description\r\n    }\r\n\r\n    override fun getItemCount(): Int\r\n    {\r\n        return _articles.size\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/adapters/ArticleAdapter.kt	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/adapters/ArticleAdapter.kt	(date 1603659051557)
+@@ -5,12 +5,14 @@
+ import android.view.View
+ import android.view.ViewGroup
+ import android.widget.TextView
++import androidx.recyclerview.widget.DividerItemDecoration
+ import androidx.recyclerview.widget.RecyclerView
+ import com.francescobonizzi.invoiceEstimateReceiptMaker.R
+ import com.francescobonizzi.invoiceEstimateReceiptMaker.domain.Article
+ import kotlinx.android.synthetic.main.ad_article.view.*
+ import java.text.NumberFormat
+ 
++
+ /** Template item della RecycleView */
+ class ArticleAdapter(
+     private val _articles: MutableList<Article>,
+Index: app/src/main/res/layout/ad_spinner_item_date_format.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:orientation=\"vertical\">\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:padding=\"10dp\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/spinner_item_date_format_txtDateFormat\"\r\n            android:layout_width=\"110dp\"\r\n            android:layout_height=\"20dp\"\r\n            android:ellipsize=\"marquee\"\r\n            android:singleLine=\"true\"\r\n            android:textSize=\"@dimen/DefaultTextSize\"\r\n            android:textStyle=\"bold\"\r\n            tools:text=\"dd/MM/yyyy\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/spinner_item_date_format_txtDateExample\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"20dp\"\r\n            android:ellipsize=\"marquee\"\r\n            android:singleLine=\"true\"\r\n            android:textSize=\"@dimen/DefaultTextSize\"\r\n            android:textStyle=\"normal\"\r\n            tools:text=\"Example: 05/08/1990\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <View style=\"@style/ItemsListSeparator\" />\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/ad_spinner_item_date_format.xml	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/res/layout/ad_spinner_item_date_format.xml	(date 1603660555057)
+@@ -33,6 +33,6 @@
+ 
+     </LinearLayout>
+ 
+-    <View style="@style/ItemsListSeparator" />
++    <View style="@style/CategoryItemSeparatorWithoutMargin" />
+ 
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/ad_article.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:background=\"@drawable/background_category\"\r\n    android:orientation=\"vertical\"\r\n    android:paddingStart=\"@dimen/CategoryItemLeftMargin\"\r\n    android:paddingEnd=\"@dimen/CategoryItemLeftMargin\"\r\n    tools:ignore=\"RtlSymmetry\">\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\"\r\n        android:paddingTop=\"6dp\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/txtArticleName\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_weight=\"1\"\r\n            android:ellipsize=\"marquee\"\r\n            android:gravity=\"start|center\"\r\n            android:textColor=\"@color/colorCommonText\"\r\n            android:textSize=\"20sp\"\r\n            android:textStyle=\"bold\"\r\n            tools:text=\"Bananasplit\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/txtArticleSingleItemPrice\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:gravity=\"start|center\"\r\n            android:textColor=\"@color/colorPrimary\"\r\n            android:textSize=\"20sp\"\r\n            android:textStyle=\"bold\"\r\n            tools:text=\"€13\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"horizontal\"\r\n        android:paddingBottom=\"6dp\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/txtArticleDescription\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:ellipsize=\"marquee\"\r\n            android:gravity=\"start|center\"\r\n            android:hint=\"@string/description\"\r\n            android:singleLine=\"true\"\r\n            android:textColor=\"@color/colorDisabledButton\"\r\n            android:textSize=\"12sp\"\r\n            tools:text=\"Una bananasplit piena di cioccolato dritta nel ciuculu\" />\r\n\r\n    </LinearLayout>\r\n\r\n    <View style=\"@style/ItemsListSeparator\" />\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/ad_article.xml	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/res/layout/ad_article.xml	(date 1603659454334)
+@@ -59,6 +59,4 @@
+ 
+     </LinearLayout>
+ 
+-    <View style="@style/ItemsListSeparator" />
+-
+ </LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/f_settings_invoices.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/colorFragmentSettingsBackground\"\r\n    android:orientation=\"vertical\"\r\n    android:paddingBottom=\"@dimen/BottomPaddingForPagesWithBottomNavigationBar\">\r\n\r\n    <include layout=\"@layout/c_navigation_top_bar\" />\r\n\r\n    <TextView\r\n        style=\"@style/FragmentTitleForInternalPage\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"@string/fragment_settings_invoices_settings\" />\r\n\r\n    <ScrollView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\">\r\n\r\n        <LinearLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:orientation=\"vertical\">\r\n\r\n            <TextView style=\"@style/CategoryTitle\" />\r\n\r\n            <LinearLayout style=\"@style/CategoryBlock\">\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnRegionalSettings\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_regional_settings_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnCompanyDetails\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_company_settings_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnPaymentDetails\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_payment_settings_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnTaxes\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_taxes_settings_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnDiscount\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_discount_settings_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnLogoAndSignature\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_logo_and_signature_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnDefaultNotes\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_default_notes_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnInvoiceNumber\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/fragment_invoice_number_title\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnDates\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/dates\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n                <View style=\"@style/CategoryBlock\" />\r\n\r\n                <LinearLayout\r\n                    android:id=\"@+id/btnTemplates\"\r\n                    style=\"@style/ListLikeButton\"\r\n                    tools:ignore=\"UseCompoundDrawables\">\r\n\r\n                    <TextView\r\n                        style=\"@style/ListLikeButtonText\"\r\n                        android:text=\"@string/invoice_templates\" />\r\n\r\n                    <ImageView\r\n                        style=\"@style/ListLikeButtonRightIcon\"\r\n                        android:contentDescription=\"@string/arrow_icon_to_show_that_you_are_going_to_a_new_page\"\r\n                        android:src=\"@drawable/ic_baseline_arrow_forward_ios_24\" />\r\n\r\n                </LinearLayout>\r\n\r\n            </LinearLayout>\r\n\r\n        </LinearLayout>\r\n\r\n    </ScrollView>\r\n\r\n</LinearLayout>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/f_settings_invoices.xml	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/res/layout/f_settings_invoices.xml	(date 1603660337012)
+@@ -45,7 +45,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnCompanyDetails"
+@@ -63,7 +63,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnPaymentDetails"
+@@ -81,7 +81,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnTaxes"
+@@ -99,7 +99,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnDiscount"
+@@ -117,7 +117,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnLogoAndSignature"
+@@ -135,7 +135,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnDefaultNotes"
+@@ -153,7 +153,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnInvoiceNumber"
+@@ -171,7 +171,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnDates"
+@@ -189,7 +189,7 @@
+ 
+                 </LinearLayout>
+ 
+-                <View style="@style/CategoryBlock" />
++                <View style="@style/CategoryItemSeparator" />
+ 
+                 <LinearLayout
+                     android:id="@+id/btnTemplates"
+Index: app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/pages/ArticlesFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.francescobonizzi.invoiceEstimateReceiptMaker.pages\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport androidx.core.content.ContextCompat.getColor\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.navigation.NavController\r\nimport androidx.navigation.findNavController\r\nimport androidx.recyclerview.widget.LinearLayoutManager\r\nimport androidx.recyclerview.widget.RecyclerView\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.R\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.adapters.ArticleAdapter\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.dialogs.DialogArticleTap\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.domain.Article\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.domain.InvoiceArticle\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.logging.ILogger\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.pages.invoices.InvoiceDetailActivity\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.storage.abstractions.IAppConfigurationRepository\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.storage.abstractions.IArticlesRepository\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.utilities.DialogsHelpers\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.utilities.Helpers\r\nimport com.francescobonizzi.invoiceEstimateReceiptMaker.utilities.ItemClickSupport\r\nimport kotlinx.android.synthetic.main.c_navigation_top_bar.*\r\nimport kotlinx.android.synthetic.main.f_articles.*\r\nimport org.koin.android.ext.android.inject\r\nimport java.text.NumberFormat\r\n\r\nclass ArticlesFragment : Fragment()\r\n{\r\n    private lateinit var _navigationHost: NavController\r\n    private lateinit var _recyclerView: RecyclerView\r\n    private lateinit var _viewAdapter: RecyclerView.Adapter<*>\r\n    private lateinit var _viewManager: RecyclerView.LayoutManager\r\n    private lateinit var _articles: MutableList<Article>\r\n    private lateinit var _currencyFormat: NumberFormat\r\n\r\n    private val _logger: ILogger by inject()\r\n    private val _articlesRepository: IArticlesRepository by inject()\r\n    private val _appConfigurationRepository: IAppConfigurationRepository by inject()\r\n\r\n    private var _isForInvoice: Boolean = false\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View?\r\n    {\r\n        return inflater.inflate(\r\n            R.layout.f_articles,\r\n            container,\r\n            false)\r\n    }\r\n\r\n    override fun onViewCreated(view: View, savedInstanceState: Bundle?)\r\n    {\r\n        super.onViewCreated(view, savedInstanceState)\r\n        requireActivity().window.statusBarColor = getColor(requireContext(), R.color.statusBarBackgroundColorForItemsActivity)\r\n\r\n        try\r\n        {\r\n            _navigationHost = requireView().findNavController()\r\n\r\n            val appConfiguration = _appConfigurationRepository.get()\r\n            _currencyFormat = Helpers.getCurrencyFormat(appConfiguration)\r\n\r\n            // Significa che sono arrivato qui per scegliere un article da aggiungere all'invoice\r\n            _isForInvoice = arguments?.getBoolean(\"isForInvoice\") == true\r\n\r\n            setPageData() // Per primo perché qui inizializzo la RecyclerView\r\n            setHandlers()\r\n        }\r\n        catch (exception: Exception)\r\n        {\r\n            _logger.error(exception)\r\n            DialogsHelpers.showError(requireActivity(), getString(R.string.generic_error_load))\r\n            _navigationHost.popBackStack()\r\n        }\r\n    }\r\n\r\n    private fun evaluateEmptyPlaceholder()\r\n    {\r\n        if (_articles.count() == 0)\r\n        {\r\n            containerNoItems.visibility = View.VISIBLE\r\n        }\r\n        else\r\n        {\r\n            containerNoItems.visibility = View.GONE\r\n        }\r\n    }\r\n\r\n    private fun setPageData()\r\n    {\r\n        if (_isForInvoice)\r\n        {\r\n            txtBack.text = Helpers.getPreviousPageTitle(_navigationHost)\r\n        }\r\n        else\r\n        {\r\n            btnBack.visibility = View.INVISIBLE\r\n        }\r\n\r\n        btnAdditionalTopRightButton.text = \"\"\r\n        btnAdditionalTopRightButton.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_add, 0)\r\n        btnAdditionalTopRightButton.visibility = View.VISIBLE\r\n\r\n        _articles = _articlesRepository.getAll()\r\n        evaluateEmptyPlaceholder()\r\n\r\n        _viewManager = LinearLayoutManager(requireContext())\r\n        _viewAdapter = ArticleAdapter(_articles, _currencyFormat)\r\n\r\n        _recyclerView = listArticles.apply {\r\n            // Migliora le performance se gli oggetti non hanno cambi di layout in corso\r\n            setHasFixedSize(true)\r\n            layoutManager = _viewManager\r\n            adapter = _viewAdapter\r\n        }\r\n    }\r\n\r\n    private fun setHandlers()\r\n    {\r\n        if (_isForInvoice)\r\n        {\r\n            btnBack.setOnClickListener { _navigationHost.popBackStack() }\r\n        }\r\n\r\n        // Se utilizzo questa vista per aggiungere gli articoli all'invoice,\r\n        // non permetto la cancellazione o la modifica degli articoli\r\n        if (!_isForInvoice)\r\n        {\r\n            ItemClickSupport.addTo(_recyclerView).onItemClick { position ->\r\n                val dialog = DialogArticleTap(\r\n                    _selectedArticle = _articles[position],\r\n                    _selectedArticleAdapter = _viewAdapter,\r\n                    _allArticles = _articles,\r\n                    _selectedArticlePosition = position,\r\n                    _navigationHost = _navigationHost,\r\n                    _articlesRepository = _articlesRepository,\r\n                    _onItemDeleted = { evaluateEmptyPlaceholder() })\r\n                dialog.show(parentFragmentManager, tag)\r\n            }\r\n        }\r\n        else\r\n        {\r\n            ItemClickSupport.addTo(_recyclerView).onItemClick { position ->\r\n\r\n                val selectedArticle = _articles[position]\r\n                val invoice =\r\n                    (requireActivity() as InvoiceDetailActivity).currentInvoiceEditor!!.invoice\r\n                val newInvoiceArticle = InvoiceArticle(selectedArticle)\r\n                invoice.articles.add(newInvoiceArticle)\r\n\r\n                // Rimando alla pagina in cui scegli la quantità dell'articolo\r\n                val bundle = Bundle()\r\n                bundle.putInt(\"invoiceArticleId\", invoice.articles.indexOf(newInvoiceArticle))\r\n\r\n                _navigationHost.navigate(\r\n                    R.id.action_articlesFragment_to_invoiceDetailArticleDetail,\r\n                    bundle)\r\n            }\r\n        }\r\n\r\n        btnAdditionalTopRightButton.setOnClickListener {\r\n            if (!_isForInvoice)\r\n            {\r\n                // Se non è per l'invoice, navigo a dettaglio/creazione di un nuovo articolo per la lista generale\r\n                _navigationHost.navigate(R.id.action_navigationArticlesFragment_to_articleDetailFragment)\r\n            }\r\n            else\r\n            {\r\n                // Se è per l'invoice, navigo a dettaglio/creazione di un nuovo articolo per l'invoice\r\n                _navigationHost.navigate(R.id.action_articlesFragment_to_invoiceDetailArticleDetail)\r\n            }\r\n        }\r\n\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/pages/ArticlesFragment.kt	(revision b95a2e81c763569245f641276dee37c55af91898)
++++ app/src/main/java/com/francescobonizzi/invoiceEstimateReceiptMaker/pages/ArticlesFragment.kt	(date 1603659941586)
+@@ -4,14 +4,18 @@
+ import android.view.LayoutInflater
+ import android.view.View
+ import android.view.ViewGroup
++import androidx.core.content.ContextCompat
+ import androidx.core.content.ContextCompat.getColor
++import androidx.core.content.ContextCompat.getDrawable
+ import androidx.fragment.app.Fragment
+ import androidx.navigation.NavController
+ import androidx.navigation.findNavController
++import androidx.recyclerview.widget.DividerItemDecoration
+ import androidx.recyclerview.widget.LinearLayoutManager
+ import androidx.recyclerview.widget.RecyclerView
+ import com.francescobonizzi.invoiceEstimateReceiptMaker.R
+ import com.francescobonizzi.invoiceEstimateReceiptMaker.adapters.ArticleAdapter
++import com.francescobonizzi.invoiceEstimateReceiptMaker.customControls.DividerItemDecorator
+ import com.francescobonizzi.invoiceEstimateReceiptMaker.dialogs.DialogArticleTap
+ import com.francescobonizzi.invoiceEstimateReceiptMaker.domain.Article
+ import com.francescobonizzi.invoiceEstimateReceiptMaker.domain.InvoiceArticle
+@@ -118,6 +122,9 @@
+             layoutManager = _viewManager
+             adapter = _viewAdapter
+         }
++
++        val dividerItemDecoration = DividerItemDecorator(getDrawable(requireActivity(), R.drawable.recyclerview_items_divider)!!)
++        _recyclerView.addItemDecoration(dividerItemDecoration)
+     }
+ 
+     private fun setHandlers()

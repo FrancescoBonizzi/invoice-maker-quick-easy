@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/background_items_like_invoices"
+    android:elevation="8dp"
+    android:orientation="vertical"
+    android:outlineSpotShadowColor="#878787"
+    android:padding="@dimen/FragmentLeftMargin"
+    tools:ignore="RtlSymmetry"
+    tools:targetApi="p">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/txtInvoiceCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/colorCommonText"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="INV-1234" />
+
+            <TextView
+                android:id="@+id/txtCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/colorCommonText"
+                android:textSize="12sp"
+                tools:text="Mimmo Davendere" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/badgePaid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/invoice_badge_paid"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBadgeText"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    tools:text="Paid"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/badgeExpired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:background="@drawable/invoice_badge_expired"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBadgeText"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    tools:text="Expired"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="end|top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtCreationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top|end"
+                android:singleLine="true"
+                android:textColor="@color/colorDisabledButton"
+                tools:text="05/08/1990" />
+
+            <TextView
+                android:id="@+id/txtInvoiceTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|end"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="123€" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

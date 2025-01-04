@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFragmentSettingsBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/BottomPaddingForPagesWithBottomNavigationBar">
+
+    <include
+        android:id="@+id/navigationTopBar"
+        layout="@layout/c_navigation_top_bar" />
+
+    <TextView
+        style="@style/FragmentTitleForInternalPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invoice_templates" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".pages.settings.invoicesSettings.TemplatesFragment">
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/invoice_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listLayouts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/ad_template_layout" />
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/layout_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listColors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="8dp"
+                android:scrollbars="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/ad_template_color" />
+
+            <TextView
+                style="@style/CategoryTitle"
+                android:text="@string/preview" />
+
+            <LinearLayout style="@style/CategoryBlock">
+
+                <LinearLayout
+                    android:id="@+id/btnInvoicePreview"
+                    style="@style/ListLikeButton">
+
+                    <ImageView
+                        style="@style/ListLikeButtonLeftIconCanDisable"
+                        android:contentDescription="@string/fragment_settings_invoices_settings_icon_description"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/ic_picture" />
+
+                    <TextView
+                        style="@style/ListLikeButtonText"
+                        android:duplicateParentState="true"
+                        android:text="@string/invoice_preview" />
+
+                    <ImageView
+                        style="@style/ListLikeButtonRightIcon"
+                        android:contentDescription="@string/arrow_icon_to_show_that_you_are_going_to_a_new_page"
+                        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

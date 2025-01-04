@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <style>
+        /* NB: non utilizzare display: grid; perché safari non supporta grid-template-* */
+
+        :root {
+            --primary-color: #2e9eff;
+            --primary-color-lighter: #e9f5ff;
+            --text-color-over-primary-color: #ffffff;
+            --key-value-label-color: gray;
+            --common-text-color: black;
+        }
+
+        * {
+            font-family: arial;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .error-title {
+            color: #fd6f03;
+            font-size: 35px;
+            line-height: 40px;
+        }
+
+        #errors-content {
+            display: none;
+            margin: 20px;
+        }
+
+        #error-message {
+            font-size: 12px;
+            color: gray;
+            display: none;
+        }
+
+        body {
+            color: var(--common-text-color);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        .total-value {
+            color: var(--text-color-over-primary-color);
+        }
+
+        h1,
+        h2,
+            {
+            color: var(--common-text-color);
+        }
+
+        h4,
+        h3 {
+            color: var(--key-value-label-color);
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        #billedByBlock {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .low-margin-left {
+            margin-left: 30px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        span,
+        a {
+            line-height: 20px;
+            font-size: 14px;
+        }
+
+        #articles-table {
+            width: 100%;
+        }
+
+        hr {
+            height: 1px;
+            color: black;
+            background-color: black;
+            border: none;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        .articles-th {
+            color: var(--common-text-color);
+            background-color: white;
+            font-size: 14px;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        #articles-table {
+            margin-top: 10px;
+        }
+
+        #firstTh {
+            text-align: left;
+            padding-left: 8px;
+        }
+
+        .articles-td,
+        .article-item-td {
+            padding: 6px;
+            font-size: 14px;
+            background-color: var(--primary-color-lighter);
+        }
+
+        .articles-td {
+            text-align: center;
+        }
+
+        .article-item-td {
+            text-align: left;
+        }
+
+        #logo {
+            height: 100px;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #signature-container {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #signature {
+            height: 80px;
+        }
+
+        #paymentNotes {
+            color: var(--common-text-color);
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .two-columns-box {
+            display: flex;
+        }
+
+        thead {
+            display: table-header-group;
+        }
+
+        .data-container {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        #invoiceCode,
+        #creationDate,
+        #expirationDate,
+        #expirationDateField {
+            color: var(--common-text-color);
+        }
+
+        #invoiceCodeDateContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        #footerNotes {
+            text-align: center;
+            color: var(--key-value-label-color);
+            font-size: 14px;
+        }
+
+        .totals-container {
+            color: var(--common-text-color);
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        #partialField,
+        #discountField,
+        #taxesField,
+        #totalField {
+            padding: 6px;
+            font-size: 14px;
+            background-color: var(--primary-color-lighter);
+            width: 250px;
+        }
+
+        #partialValue,
+        #discountValue,
+        #taxesValue,
+        #totalValue {
+            text-align: right;
+            padding: 6px;
+            font-weight: bold;
+            color: var(--common-text-color);
+            min-width: 100px;
+        }
+
+        .total-label {
+            text-align: left;
+            font-weight: bold;
+            color: var(--common-text-color);
+            padding: 6px;
+            width: 250px;
+        }
+
+        a {
+            color: black;
+            font-size: 14px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        #billedByContainer {
+            flex: 1 1 0px;
+        }
+
+        #billedToBlock {
+            background-color: var(--primary-color-lighter);
+            padding: 20px;
+            width: 300px;
+        }
+
+        #invoiceCodeEccContainer {
+            background-color: var(--primary-color-lighter);
+            padding: 20px 20px 20px 0;
+            margin-top: 20px;
+        }
+
+        #invoiceCodeField,
+        #creationDateField,
+        #expirationDateField {
+            display: inline;
+            padding-left: 20px;
+        }
+
+        #invoiceCode,
+        #creationDate,
+        #expirationDate {
+            font-weight: bold;
+        }
+
+        #bankDetailsBlock {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        #watermark {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        #watermark p {
+            margin: 0 0 0 10px;
+            padding: 0;
+        }
+
+        #watermark p a {
+            text-decoration: none;
+        }
+
+        #watermark img {
+            height: 30px;
+        }
+
+        .horizontal-line {
+            height: 1px;
+            flex: 1 1 0;
+            margin-right: 10px;
+            background: var(--primary-color);
+        }
+
+        .powered-by {
+            color: gray;
+            font-weight: normal;
+            font-size: 10px;
+        }
+
+        .powered-by-app-name {
+            color: #fdc30a;
+            font-size: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div id="errors-content">
+    <h1 class="error-title">Ooops! An error occurred!</h1>
+    <h2 class="error-title">We have received the error report and we will fix that soon, stay
+        tuned!</h2>
+    <p id="error-message"></p>
+</div>
+
+<div id="invoice-content">
+
+    <div id="watermark">
+        <div class="horizontal-line"></div>
+        <img src="watermark.png"/>
+        <p><a href="https://www.fishingfrogs.com/invoices/"><span
+                class="powered-by">Powered by</span> <span
+                class="powered-by-app-name">Invoice Maker: Quick & Easy</span></a></p>
+    </div>
+
+    <div>
+        <img src='#EASTER_EGG_LOGO#' id='logo' onerror="this.style = 'display: none'"/>
+    </div>
+
+    <div class="two-columns-box">
+
+        <div id="billedByContainer">
+
+            <div id="billedByBlock">
+                <span id="companyName"></span>
+                <span id="holderName"></span>
+                <span id="address1"></span>
+            </div>
+
+            <div id='businessNumberField'>
+                <span id='businessNumber'></span>
+            </div>
+
+            <div id='email1Field'>
+                <a id='email1'></a>
+            </div>
+
+            <div id='phone1Field'>
+                <span id='phone1'></span>
+            </div>
+
+            <div id='phone2Field'>
+                <span id='phone2'></span>
+            </div>
+
+            <div id='webSiteField'>
+                <a id='webSite'></a>
+            </div>
+
+        </div>
+
+        <div id='billedToBlock'>
+
+            <div>
+                <span>To</span>
+            </div>
+
+            <div>
+                <span id="customerName" class="bold"></span>
+            </div>
+
+            <div>
+                <span id="customerAddress"></span>
+            </div>
+
+            <div id='customerEmail1Field'>
+                <a id='customerEmail1'></a>
+            </div>
+
+            <div id='customerPhone1Field'>
+                <span id='customerPhone1'></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="two-columns-box">
+        <div id="invoiceCodeEccContainer">
+
+            <div id='invoiceCodeField'>
+                <span>Code:</span>
+                <span id='invoiceCode'></span>
+            </div>
+
+            <div id='creationDateField'>
+                <span>Date:</span>
+                <span id='creationDate'></span>
+            </div>
+
+            <div id='expirationDateField'>
+                <span>Due Date:</span>
+                <span id='expirationDate'></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="bankDetailsBlock">
+
+        <h3>Payment</h3>
+
+        <div id='checkHolderField'>
+            <div id='checkHolder'></div>
+        </div>
+
+        <div id='bankField'>
+            <div id='bankDetails'></div>
+        </div>
+
+    </div>
+
+    <div id="paypalBlock">
+
+        <div id='paypalEmailField'>
+            <span>PayPal Account:</span>
+            <a id='paypalEmail'></a>
+        </div>
+
+    </div>
+
+    <div id='cashPaymentField'>
+        <span>Cash</span>
+    </div>
+
+    <div id='creditCardPaymentField'>
+        <span>Credit Card</span>
+    </div>
+
+    <div id='debitCardPaymentField'>
+        <span>Debit Card</span>
+    </div>
+
+    <p id="paymentNotes"></p>
+
+    <hr/>
+
+    <table id="articles-table">
+
+        <thead>
+        <tr>
+            <th class="articles-th" id="firstTh">Description</th>
+            <th class="articles-th">Quantity</th>
+            <th class="articles-th">Unit Cost</th>
+            <th class="articles-th" id="lastTh">Price</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <table class="totals-container">
+
+        <tr id='partialField'>
+            <td class="total-label">Sub Total:</td>
+            <td id='partialValue'></td>
+        </tr>
+
+        <tr id='discountField'>
+            <td class="total-label" id='discountLabel'>Discount:</td>
+            <td id='discountValue'></td>
+        </tr>
+
+        <tr id='taxesField'>
+            <td class="total-label" id='taxesLabel'>Tax:</td>
+            <td id='taxesValue'></td>
+        </tr>
+
+        <tr id='totalField'>
+            <td class="total-label total-value" id='totalLabel'>Total Amount:</td>
+            <td id='totalValue'></td>
+        </tr>
+
+    </table>
+
+    <div id="signature-container">
+        <image src="#EASTER_EGG_SIGNATURE#" id="signature"
+               onerror="this.style = 'display: none'"></image>
+    </div>
+
+    <p id="footerNotes"></p>
+
+    <script src="templateLoad.js"></script>
+
+</div>
+
+</body>
+
+<script>
+
+    try {
+
+        var templateDebugMode = true;
+
+        if (templateDebugMode) {
+            loadDebugMode();
+        }
+        else {
+            var rawJson = '#EASTER_EGG_JSON#';
+            var rawJsonTotals = '#EASTER_EGG_JSON_TOTALS#';
+
+            loadTemplate(rawJson, rawJsonTotals);
+        }
+
+    } catch (err) {
+        document.getElementById('errors-content').style = 'display: block';
+        document.getElementById('invoice-content').style = 'display: none';
+        document.getElementById('error-message').innerHTML = err;
+    }
+
+</script>
+
+</html>
