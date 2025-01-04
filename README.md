@@ -1,6 +1,10 @@
 # Invoice Maker - Quick & Easy
 
+![Logo](logo.png)
+
 Generate beautiful and professional invoices and receipts directly from your Android device.
+
+
 
 ## Overview
 
